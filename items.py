@@ -1,12 +1,12 @@
-item_battery = {
-    "id": "battery",
+item_fuse = {
+    "id": "fuse",
 
-    "name": "the battery",
+    "name": "the fuse",
 
     "description":
-    """A small battery, could help me turn the lights on in this place.""",
+    """A small fuse, could help me turn the lights on in this place.""",
 
-    "weight": "4"
+    "weight": "2"
 }
 
 item_key = {
@@ -66,11 +66,24 @@ wine glass. It will be pretty useless, especially for drinking from.""",
     "weight": "2"
 }
 
+item_phone = {
+    "id": "phone",
+
+    "name": "phone",
+
+    "description":
+    """ A phone without signal, is there a point on holding onto this. """,
+
+    "weight": "1"
+}
+
+
 items = {
-    "battery" : item_battery,
+    "fuse" : item_fuse,
     "key" : item_key,
     "pick" : item_pick,
     "money": item_money,
     "torch": item_torch,
-    "glass": item_glass
+    "glass": item_glass,
+    "phone": item_phone
 }

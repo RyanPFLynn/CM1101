@@ -4,25 +4,36 @@ entrance_hall = {
     "name": "Entrance Hall",
 
     "description":
-    """You are in the entrance hall to the manner. You see a room filled with 
-cob webs and dust. The stench of damp srouds the place, and the leaking walls 
-bring a feel of being followed. To the north is a rusted kitchen, to the west 
-is the lounge. Looks like I need a key to escape this place.""",
+    """You are in the entrance hall to the Manor House. The room is dark and dank, 
+the stench of damp is overpowering. Every surface is covered with a thick layer 
+of dust, undisturbed even by your footsteps. Spiders have long since taken up 
+residence, their webs cling to the walls and across the corners of the room. 
+Each step you take it matched by the groan of the floor boards, scuttling 
+above your head... perhaps the house is not a deserted as you first thought. 
+
+You try the door once again, but it's firmly bolted shut. Looks like you're 
+going to need a key to escape. 
+
+There are only two exits: North will take you to the kitchen. 
+West to the Lounge.""",
 
     "exits": {"north": "Kitchen", "west":"Lounge"}, 
 
-    "items": [item_battery]
+    "items": [item_fuse]
 }
 
 kitchen = {
     "name": "kitchen",
 
     "description":
-    """You walk through the rusted door. The smell of rotting food
-and rats engulfs the room. Sitting on one of the work tops is a
-torch. To the north is the backgarden, to the east of me i can
-feel a chill of the freezer. To the west looks to be the dining
-room. If i go south i will end up at the entrance hall.""",
+    """The kitchen door opens with a heavy shove, sending a plague of 
+rats scurrying away. But immediately upon entering, the stench of 
+long forgotten food and an infestation of rats is nauseating. 
+
+To the north of the kitchen you can vaguely make out the backgarden 
+through the dirty windows. To the east there looks to be some 
+kind of industrial freezer. West will take you to the dining room. 
+South back to the entrance hall.""",
 
     "exits":{"north":"Backyard", "east":"Freezer", "west":"Dining", "south": "Hall"}, 
 
@@ -33,9 +44,10 @@ freezer = {
     "name": "the kitchen freezer",
 
     "description":
-    """Walking through the broken door, hanging of its hinges.
-    You enter into the freezer, there seems to be something on the floor,
-but I need some power to see it.  """,
+    """The cool air hits you as you enter. But the cold has only 
+preserved an odd stale smell.There's something on the floor, 
+but it's too dark. You need some light. There is only one exit, back 
+into the kitchen.""",
 
     "exits":{"west":"Kitchen"},
 
@@ -46,9 +58,11 @@ garage = {
     "name": "the garage",
 
     "description":
-    """You are in the garage. An empty bleak room, there must be something around here.
-There seems to be a battery box in here. I wonder if i find a battery and get some light for 
-this dark house.""",
+    """You are in the garage. Amongst a horde of odd machinery 
+parts and decomposing boxes - nothing that seems to be any 
+use. You continue to search...there must be something around 
+here. You come across an empty fuse box. Perhaps if you can 
+find the fuse you can restore the power? """,
 
     "exits":{"north":"Backyard"},
 
@@ -59,10 +73,14 @@ lounge = {
     "name": "the lounge",
 
     "description":
-    """You are standing next to a chair in the lounge. You look down and notice the 
-dust filled floor. As you walk in, you notice your blurred reflection in the 
-broken smeared mirror. There is a safe, looks like i'll need a pick to 
-open this.""",
+    """The lounge is in a decrepid state; furniture is 
+over-turned and broken, upholstery has been slashed. There 
+are paintings on the wall - faided landscapes and creepy 
+portraits - all bearing the same violent slashes. You move 
+towards the largest portrait, inspecting the cut marks 
+a little closer. You notice there is something hidden 
+behind the painting...it's a safe, built into the wall. 
+It's locked.You'll need to pick the lock. """,
 
     "exits":{"north":"Dining"},
 
@@ -73,9 +91,11 @@ dining_room = {
     "name": "the dining room",
 
     "description":
-    """Walking into the dining room you notice the floors creaking. A table is 
-pushed to one side, and a empty glass of wine is all that remains of 
-civilisation.""",
+    """Glass and china crack under your feet as you 
+enter the dining room. The floor is littered with 
+the remains of a large dining service. The long 
+table has been pushed against the wall, its surface 
+marred with dents and scratches. """,
    
     "exits":{"north":"Backyard","east":"Kitchen"},
 
@@ -86,26 +106,17 @@ backyard = {
     "name": "the backyard",
 
     "description":
-    """I seem to be outside, I can see the night sky with a full 
-moon beaming down on me.To the south, behind me is the kitchen, 
-to the east of me is the garage. Tbe floor is convered in 
-rubbish, I wonder if there is anything useful here?""",
+    """The back yard resembles a jungle. Overgrown and untended. Surrounding 
+the entire garden is a brickwall, far to high to climb over. The only 
+light avaiable is that of the moon, illuminating the heaps of rubbish amongst 
+the plants. You wonder if there is anything of use? 
+
+Back south is the kitchen. To the east is the garage.""",
 
     "exits": {"south":"Kitchen", "east":"Garage"},
 
     "items": []
 }
-
-#exit = {
-    #"name": "the exit",
-
-    #"description":
-    #""" I have escaped the house and i am free!!! """,
-
-    #"exits":{},
-
-    #"items":[]
-#}
 
 rooms = {
     "Kitchen": kitchen, 
@@ -115,7 +126,6 @@ rooms = {
     "Lounge": lounge, 
     "Dining": dining_room, 
     "Backyard": backyard
-    #"Exit": exit
 }
 
 

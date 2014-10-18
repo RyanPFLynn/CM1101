@@ -53,7 +53,7 @@ def print_room(room):
     (use print_room_items() for this). """
 
     # Display room name
-    print("")
+    print("--------------------------------------------------------------------------------")
     print(room["name"].upper())
     print("")
     # Display room description
@@ -62,8 +62,8 @@ def print_room(room):
     print_room_items(room)
 
 def print_fear(fear):
-    print("Your fear level is " + str(fear))
-    print()
+    print("Your fear level is " + str(fear) + "/25")
+    print("--------------------------------------------------------------------------------")
 
 def exit_leads_to(exits, direction):
     """This function takes a dictionary of exits and a direction (a particular
@@ -203,6 +203,9 @@ def execute_command(command):
     elif command[0] == "demo":
         game.won = True
 
+    elif command[0] == "faint":
+        game.won = False
+
     elif command[0] == "examine":
         if len(command) > 1:
             execute_examine(command[1])
@@ -240,9 +243,28 @@ def move(exits, direction):
     # Next room to go to
     return rooms[exits[direction]]
 
+def story():
+    story = { 
+     "description":
+     """You are driving home from work as usual at 11pm. 
+You are enjoying the newly released music and suddenly you 
+find yourself lost in a unknown area. You could not find your 
+way out but there is a house nearby, and you decide to ask 
+for help. As you walk inside, the door shuts and suddenly 
+lockes, you cannot seem to open it.
+
+Your mission now is to try to find the key for 
+escaping the house.
+Remember the fear level increases and you will be terrified and never get out.
+You currently have a phone without signal and some cash.
+ """}
+    print(story["description"])
+
 
 # This is the entry point of our program
 def main():
+    story()
+    start = input("Hit enter to start your escape")
 
     # Main game loop
     while True:

@@ -2,7 +2,7 @@ from items import *
 from map import rooms
 import game
 
-inventory = [item_money]
+inventory = [item_money, item_phone]
 
 # Start game at the reception
 current_room = rooms["Hall"]
